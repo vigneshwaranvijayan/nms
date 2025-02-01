@@ -1,0 +1,61 @@
+/* Make the body fill the full height of the viewport */
+html,
+body {
+    height: 100%;
+}
+
+/* Flexbox layout to push footer to the bottom */
+.content {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Footer stays at the bottom */
+footer {
+    margin-top: auto;
+    background-color: #343a40;
+    /* Dark color */
+    color: white;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover {
+    color: #ccc;
+}
+
+/* Navbar adjustments */
+.navbar {
+    background-color: #f8f9fa;
+}
+
+.navbar-brand {
+    color: #343a40;
+}
+
+.navbar-brand:hover {
+    color: #007bff;
+}
+
+/* Responsive Design: Making sure it's mobile-friendly */
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar-brand {
+        margin: 5px 0;
+    }
+
+    footer .container {
+        text-align: center;
+    }
+
+    footer a {
+        margin: 0 5px;
+    }
+}
