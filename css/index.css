@@ -4,13 +4,6 @@ body {
     height: 100%;
 }
 
-/* Flexbox layout to push footer to the bottom */
-.content {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
 /* Footer stays at the bottom */
 footer {
     margin-top: auto;
@@ -31,24 +24,22 @@ footer a:hover {
 /* Navbar adjustments */
 .navbar {
     background-color: #f8f9fa;
+    border-radius: 60px;
+    width: 90%;
+    margin: 5%;
 }
 
-.navbar-brand {
-    color: #343a40;
+.main1{
+    width: 100%;
+    height: 70vh;
+    background-image: url('../image/back1.jpg');
 }
-
-.navbar-brand:hover {
-    color: #007bff;
-}
-
 /* Responsive Design: Making sure it's mobile-friendly */
 @media (max-width: 768px) {
-    .navbar-nav {
-        text-align: center;
-    }
+    .navbar{
+        width: 100%;
+        margin: 0;
 
-    .navbar-brand {
-        margin: 5px 0;
     }
 
     footer .container {
