@@ -245,6 +245,123 @@ footer .text-center {
     font-weight: bold;
 }
 
+.education-section {
+    margin: 30px auto;
+    max-width: 800px;
+    padding: 20px;
+    background: rgb(97,237,217);
+    background: linear-gradient(90deg, rgba(97,237,217,1) 16%, rgba(12,194,124,0.6027661064425771) 99%);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.education-section h3 {
+    font-size: 2rem;
+    color: #0b0964;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.card3 {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.education-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.education-list li {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    font-size: 2rem;
+    color: #522566;
+    margin-right: 15px;
+}
+
+.education-detail {
+    flex: 1;
+}
+
+.education-detail strong {
+    font-weight: bold;
+    color: #0b0964;
+}
+
+.year {
+    font-size: 0.9rem;
+    color: #888;
+    display: block;
+    margin-top: 5px;
+}
+.teaching-experience {
+    margin: 30px auto;
+    width: 90%;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.teaching-experience h3 {
+    font-size: 2rem;
+    color: #0b0964;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.card4 {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.experience-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.experience-list li {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    font-size: 2rem;
+    color: #1e90ff;
+    margin-right: 15px;
+}
+
+.experience-detail {
+    flex: 1;
+}
+
+.experience-detail strong {
+    font-weight: bold;
+    color: #0b0964;
+}
+
+.extra-detail {
+    font-size: 0.9rem;
+    color: #888;
+    display: block;
+    margin-top: 5px;
+}
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .navbar {
