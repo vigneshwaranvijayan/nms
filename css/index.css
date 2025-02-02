@@ -1,14 +1,10 @@
-/* Make the body fill the full height of the viewport */
 html,
 body {
     height: 100%;
 }
-
-/* Footer stays at the bottom */
 footer {
     margin-top: auto;
     background-color: #343a40;
-    /* Dark color */
     color: white;
 }
 
@@ -21,25 +17,51 @@ footer a:hover {
     color: #ccc;
 }
 
-/* Navbar adjustments */
 .navbar {
+    position: fixed;
+    margin: 5%;
     background-color: #f8f9fa;
     border-radius: 60px;
     width: 90%;
-    margin: 5%;
 }
 
-.main1{
+.main1 {
     width: 100%;
-    height: 70vh;
-    background-image: url('../image/back1.jpg');
+    height: 80vh;
+    position: relative;
+    background-image: url('../image/back1.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    /* background: url('./image/back1.png') ; */
 }
-/* Responsive Design: Making sure it's mobile-friendly */
+
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: rgba(0, 0, 0, 0.5); Optional: Add a transparent overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-wrapper {
+    position: relative;
+    /* text-align: center; */
+    color: white;
+}
+
+
 @media (max-width: 768px) {
     .navbar{
         width: 100%;
         margin: 0;
 
+    }
+    .content-wrapper {
+        margin-top: 20px;
     }
 
     footer .container {
