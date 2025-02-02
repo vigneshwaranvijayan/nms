@@ -1,7 +1,11 @@
+/* General Styling */
 html,
 body {
     height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
+
 footer {
     margin-top: auto;
     background-color: #343a40;
@@ -11,29 +15,95 @@ footer {
 footer a {
     text-decoration: none;
     color: white;
+    transition: color 0.3s ease;
 }
 
 footer a:hover {
     color: #ccc;
 }
 
+/* Navbar Styling */
 .navbar {
     position: fixed;
-    margin: 5%;
-    background-color: #3085db;
-    /* background-color: transparent; */
-    border-radius: 60px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 1% auto;
+    border-radius: 50px;
     width: 90%;
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent */
+    backdrop-filter: blur(10px); /* Glass effect */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.navbar-brand{
+    color: #292839;
 }
 
+.navbar:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #120e0e;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #57077d;
+}
+
+.navbar-toggler {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%280,0,0,0.7%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-nav .nav-item {
+    margin: 0 10px;
+}
+
+.navbar-nav .nav-item a {
+    font-size: 1rem;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-nav .nav-item a:hover {
+    color: #ab1212;
+}
+
+/* Main Section Styling */
 .main1 {
     width: 100%;
     height: 80vh;
     position: relative;
-    background-image: url('../image/back1.png');
-    background-size: 100%;
+    background-image: url('../image/back1.png'); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    /* background: url('./image/back1.png') ; */
+}
+
+.textbody {
+    display: grid;
+    gap: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 20px;
+}
+
+.text1 {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+    border-radius: 15px;
 }
 
 .background-overlay {
@@ -42,36 +112,110 @@ footer a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    color: black;
-    /* background: rgba(0, 0, 0, 0.5); Optional: Add a transparent overlay */
     display: flex;
-    /* justify-content: center; */
     align-items: center;
-}
-
-
-.content-wrapper {
-    position: relative;
-    /* text-align: center; */
+    justify-content: center;
     color: white;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.text_feild {
+    margin: 10%;
+    color: rgb(22, 9, 9);
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+.sociallinks {
+    display: flex;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin-left: 80%; 
+    flex-direction: column;
+    /* gap: 20px; */
+    padding: 15px;
+    background: linear-gradient(135deg, #1e90ff, #4682b4);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.sociallinks a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.sociallinks a:hover {
+    color: #ffcc00;
+    transform: scale(1.2);  /* Slightly larger hover effect */
 }
 
 
+
+.text_feild h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #050506;
+}
+
+.text_feild p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* Footer Styling */
+footer .container {
+    text-align: center;
+}
+
+footer a {
+    margin: 0 10px;
+}
+
+footer a i {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+footer a:hover i {
+    transform: scale(1.2); /* Slight zoom on hover */
+    color: #00e676; /* Bright green hover */
+}
+
+footer .text-center {
+    font-size: 0.9rem;
+}
+
+.card2{
+    width: 100%;
+    height: 70vh;
+    background-color: #f8f7f79c;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    .navbar{
+    .navbar {
         width: 100%;
         margin: 0;
-
-    }
-    .content-wrapper {
-        margin-top: 20px;
+        border-radius: 0;
     }
 
-    footer .container {
-        text-align: center;
+    .text_feild h3 {
+        font-size: 1.5rem;
+    }
+
+    .text_feild p {
+        font-size: 1rem;
     }
 
     footer a {
         margin: 0 5px;
+    }
+
+    footer .text-center {
+        font-size: 0.8rem;
     }
 }
